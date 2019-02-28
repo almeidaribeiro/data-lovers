@@ -7,19 +7,20 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
-
     <section class="top">
       <img class="imgTop" src="img/Pokeball.PNG" alt="logo">
       <img class="imgPokemon" src="img/logo.png" alt="logo">
       <h3 class="title">.Data</h3>
+      <nav class="drop">
+        <button class="dropmenu">MENU</button> 
+        <div class="dropmenu-content">
+          <a href="#">Tipo</a>
+          <a href="#">Peso</a>
+          <a href="#">Altura</a>
+        </div>
+      </nav>  
     </section>
 
-    <section class="showPokemons">
-      <div id="showPokemons"></div>
-    </section>
-
-  
     <script src="./data/pokemon/pokemon.js"></script>  
     <script src="main.js"></script>
   </body>
