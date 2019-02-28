@@ -1,19 +1,3 @@
-// function getPokemon() {
-//   // for(let i in POKEMON["pokemon"]){
-//     while(POKEMON["pokemon"].length < 151){
-//       console.log("foi")
-//       let pokeGet = POKEMON["pokemon"];
-//       let pokeImg = pokeGet.img;
-//       let pokeName = pokeGet.name;
-//       let pokeType = pokeGet.type;
-//       let pokeTotal = pokeImg + pokeName + pokeType;
-//       document.getElementById("exibir").innerHTML = pokeTotal
-//       console.log(pokeTotal)
-//     }      
-// }
-
-// getPokemon()
-
 window.onload = function(){
   showProducts();
 }
@@ -35,3 +19,16 @@ function showProducts() {
       `).join("")}  
   `
 }
+//function getPokemon() {
+  //  for(let i in POKEMON["pokemon"]){
+       // let pokeGet = POKEMON["pokemon"][i];
+       // let pokeImg = pokeGet.img;
+       // let pokeName = pokeGet.name;
+        //let pokeType = pokeGet.type;
+      
+     //   console.log(pokeImg, pokeName, pokeType)
+   // }
+//}
+
+ getPokemon()
+
