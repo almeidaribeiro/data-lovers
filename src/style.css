@@ -36,7 +36,7 @@ body{
 
 .dropmenu{
 	border-color: white;
-	color: rgb(218, 7, 7);
+	color: black; 
 	background-color: rgb(215, 215, 216);
 	border-radius: 3px;
 	font-family: fantasy;
