@@ -1,13 +1,20 @@
-body{
-	margin: 0px;
+body {
+	margin: 0%;
+	width: 100vw;
+	font-family: 'Niramit', sans-serif;
+	font-size: 1.2rem;
+	background-color: #DCDCDC;
 }
 
-
+h3, p {
+	margin: 0%;
+}
+	
 .top{
 	height: 100px;
 	background-color: red;
 	display: flex;
-  	justify-content: center;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -16,32 +23,33 @@ body{
 	color: black;
 	font-size: 30px;
 }
-
+	
 .imgTop{
 	padding: 15px;
 	height: 60px;
-}
-	
+} 
+		
 .imgPokemon{
 	width: 300px;
 	height: 190px;
 	justify-content: flex-start;
-}
+} 
 
 /* The container <div> - needed to position the dropdown content */
 .drop {
   position: relative;
-  display: inline-block;
+	display: inline-block;
 }
 
 .dropmenu{
 	border-color: white;
 	color: black; 
-	background-color: rgb(215, 215, 216);
+	background-color:white;
 	border-radius: 3px;
 	font-family: fantasy;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bolder;
+	justify-content: flex-start;
 }
 
 /* Dropmenu Content (Hidden by Default) */
@@ -52,12 +60,12 @@ body{
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
-	background-color: rgb(3, 3, 90);
+	background-color: white;
   }
   
   /* Links inside the dropdown */
   .dropmenu-content a {
-	color: white;
+	color: black;
 	-webkit-text-stroke-color: black;
 	padding: 12px 16px;
 	font-family: fantasy;
@@ -71,12 +79,73 @@ body{
 	background-color: rgb(237, 250, 53);
   }
   
-  /* Show the dropdown menu on hover */
+   /*Show the dropdown menu on hover*/
   .drop:hover .dropmenu-content {
 	display: block;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .drop:hover .dropmenu {
-	background-color: rgb(252, 156, 156);
-  }
+	background-color: rgb(222, 236, 26);
+	}
+
+	
+.poke-list{
+	width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.display{
+	width: 25%;
+	padding-top: 20px;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.poke-img {
+  width: 60%;
+}
+
+.poke-name {
+  text-align: center;
+  margin: auto;
+  font-size: 1rem;
+  width: 70%;
+  padding: 15px;
+}
+
+
+
+/* .poke-list{
+  width: 25%;
+  margin: 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poke-img {
+  width: 50%;
+}
+
+.poke-name {
+  text-align: center;
+  margin: auto;
+  font-size: 1rem;
+  width: 70%;
+  padding: 15px;
+}
+
+.poke-type {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  padding: 15px;
+  margin-top: 0;
+} */

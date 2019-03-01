@@ -22,12 +22,14 @@ function getProducts() {
 }
 
 function showProducts() {
-  let productDiv = document.getElementById("exibir");
-  productDiv.innerHTML = `${getProducts().map((pokemon) => `
-      <div class="product-item">  
-        <img src="${pokemon["img"]}" class="product-img" />      
+  let pokeDiv = document.getElementById("display");
+  pokeDiv.innerHTML = `${getProducts().map((pokemon) => `
+      <div class="poke-list">  
+        <img src="${pokemon["img"]}" class="poke-img" />  
           <div class="text-name">
-            <h3 class="product-name">${pokemon["type"]}</h3>
+          <h3 class="poke-name">${pokemon["name"]}</h3>    
+          <div class="text-type">
+            <h3 class="poke-type">${pokemon["type"]}</h3>
           </div>
       `).join("")}  
   `
