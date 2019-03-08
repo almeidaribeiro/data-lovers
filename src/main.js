@@ -122,3 +122,49 @@ function showFilteredPokemons(pkmType) {
       `).join("")}  
   `
 }
+
+//let poke = pokemon.sort(function(a,b){return a.name - b.name});
+//console.log(poke);
+
+//function orderPkm(){
+//let pokemonOrder = pokemon.sort((a.b)=> {
+  //if(a.name > b.name){
+    //return 1;
+  //}
+    //return -1;
+//)
+//}
+
+//criar um evento
+document.getElementById("sort").addEventListener("change", function(event){
+  showOderPokemons(event)
+});
+
+function sortPokemons(event){
+  const selectedValue = event.target.value;
+  
+  if(selectedValue === "A-Z"){
+    pokemons = POKEMON["pokemon"].sort(function(a,b){
+      return a.name.localeCompare(b.name);
+    })
+  }else {
+    pokemons = POKEMON["pokemon"].sort(function(a,b){
+      return b.name.localeCompare(a.name);
+    })
+  }
+  return pokemons
+}
+
+function showOderPokemons(event) {
+  let pokeDiv = document.getElementById("order");
+  pokeDiv.innerHTML = `${sortPokemons(event).map((pokemon) => `
+      <div class="poke-list">  
+        <img src="${pokemon["img"]}" class="poke-img" />  
+          <div class="text-name">
+          <h3 class="poke-name">${pokemon["name"]}</h3>    
+          <div class="text-type">
+            <h3 class="poke-type">${pokemon["type"]}</h3>
+          </div>
+      `).join("")}  
+  `
+}
