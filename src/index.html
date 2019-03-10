@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  </head>
-  <body>
-    <section class="top">
-      <img class="imgTop" src="img/Pokeball.PNG" alt="logo">
-      <img class="imgPokemon" src="img/logo.png" alt="logo">
-      <h3 class="title">.Data</h3>
-    </section>
-    <!-- <nav class="drop">
-        <button class="dropmenu">Tipo</button> 
-        <div class="dropmenu-content">
-          <a href="#">Fire</a>
-          <a href="#">water</a>
-          <a href="#">Poison</a>
-        </div>
-      </nav> -->
-      <section id="poke-list" class="poke-list">
-        <div id="display" class="display"></div>
-      </section>
 
-      <section id="types">
-        <button id="btn-fire">Fire</button>
-        <button id="btn-grass">Grass</button>
-        <button id="btn-poison">Poison</button>
-        <button id="btn-ice">Ice</button>
-        <button id="btn-flying">Flying</button>
-        <button id="btn-psychic">Psychic</button>
-        <button id="btn-water">Water</button>
-        <button id="btn-rock">Rock</button>
-        <button id="btn-ground">Ground</button>
-        <button id="btn-electric">Electric</button>
-        <button id="btn-bug">Bug</button>
-        <button id="btn-normal">Normal</button>
-        <button id="btn-fighting">Fighting</button>
-        <button id="btn-dragon">Dragon</button>
-        <button id="btn-ghost">Ghost</button> 
-      </section>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header class="top">
+  <img class="pokeball" src="img/Pokeball.PNG" alt="pokeball">
+  <img class="pokemon-logo" src="img/logo.png" alt="logo pokemon">
+  <h3 class="title">.Data</h3>
+</header>
 
-      <section id="order">
-        <select id="sort" value="sort">
-          <option id="sel">Selecionar</option>
-          <option id="az" value="A-Z">A-Z</option>
-          <option id="za" value="Z-A">Z-A</option>
-        </select>
-      </section>
-    
-    <section class="media">
-      <p id="calculos">Informações sobre a altura de seus pokemons!</p>
-      <input type="radio" name="calculo" value="mediaAltura" id="media"/> Media de altura dos Pokemons<br />
-      <input type="radio" name="calculo" value="menor"/> Menor altura<br />
-      <input type="radio" name="calculo" value="maior"/> Maior altura<br />
-      <textarea id="averageHeight"></textarea>
-    </section>
-        
-        
-    <script src="./data/pokemon/pokemon.js"></script>  
-    <script src="main.js"></script>
-  </body>
+<body>
+  
+  <div id="types" class="btn-type">
+    <button id="btn-all" class="all">All</button>
+    <button id="btn-fire" class="fire">Fire</button>
+    <button id="btn-grass" class="grass">Grass</button>
+    <button id="btn-poison" class="poison">Poison</button>
+    <button id="btn-ice" class="ice">Ice</button>
+    <button id="btn-ground" class="ground">Ground</button>
+    <button id="btn-flying" class="flying">Flying</button>
+    <button id="btn-psychic" class="psychic">Psychic</button>
+    <button id="btn-water" class="water">Water</button>
+    <button id="btn-rock" class="rock">Rock</button>
+    <button id="btn-electric" class="electric">Electric</button>
+    <button id="btn-bug" class="bug">Bug</button>
+    <button id="btn-normal" class="normal">Normal</button>
+    <button id="btn-fighting" class="fighting">Fighting</button>
+    <button id="btn-dragon" class="dragon">Dragon</button>
+    <button id="btn-ghost" class="ghost">Ghost</button>
+  </div>
+  
+
+  <section id="selectOption">
+    <select id="sort" value="sort" >
+      <option id="sel">Ordenar</option>
+      <option id="az" value="A-Z">A-Z</option>
+      <option id="za" value="Z-A">Z-A</option>
+    </select>
+
+    <select id="media" value="media" >
+      <option id="sel">Altura</option>
+      <option id="altura" value="altura">Altura</option>
+    </select>
+  </section>
+  
+  <section class="pokemons">
+    <ul id="pokemon-list" class="pokemon-list">
+
+    </ul>
+  </section>
+
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

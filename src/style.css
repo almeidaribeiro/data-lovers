@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+
 body {
 	margin: 0%;
-	width: 100vw;
+	width: 100%;
 	font-family: 'Niramit', sans-serif;
 	font-size: 1.2rem;
 	background-color: #DCDCDC;
@@ -11,7 +13,7 @@ h3, p {
 }
 	
 .top{
-	height: 100px;
+	height: 120px;
 	background-color: red;
 	display: flex;
 	justify-content: center;
@@ -24,125 +26,179 @@ h3, p {
 	font-size: 30px;
 }
 	
-.imgTop{
+.pokeball{
 	padding: 15px;
 	height: 60px;
 } 
 		
-.imgPokemon{
+.pokemon-logo{
 	width: 300px;
 	height: 190px;
 	justify-content: flex-start;
 } 
 
-/* The container <div> - needed to position the dropdown content */
-.drop {
-  position: relative;
-	display: inline-block;
+.btn-type{
+	margin: 20px;
+	padding: 10px;
 }
 
-.dropmenu{
-	border-color: white;
-	color: black; 
-	background-color:white;
-	border-radius: 3px;
-	font-family: fantasy;
-	font-size: 25px;
-	font-weight: bolder;
-	justify-content: flex-start;
+.all{
+	background-color: pink;
+	width: 80px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;;
+	border-radius: 10px;
 }
 
-/* Dropmenu Content (Hidden by Default) 
-.dropmenu-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-	background-color: white;
-  }
-  
-  /* Links inside the dropdown 
-  .dropmenu-content a {
-	color: black;
-	-webkit-text-stroke-color: black;
-	padding: 12px 16px;
-	font-family: fantasy;
-	font-size: 20px;
-	font-weight: bolder;
-	display: block;
-  }
-  
-  /* Change color of dropdown links on hover 
-  .dropmenu-content a:hover {
-	background-color: rgb(237, 250, 53);
-  }
-  
-   /*Show the dropdown menu on hover
-  .drop:hover .dropmenu-content {
-	display: block;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown 
-  .drop:hover .dropmenu {
-	background-color: rgb(222, 236, 26);
-	}*/
-
+.fire{
+	background-color: #ff8533;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
 	
-.poke-list{
-	width: 80%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center
+	border-radius: 10px;
 }
 
-.display{
-	width: 25%;
-	padding-top: 20px;
+.grass{
+	background-color: #53c653;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
 }
 
-.poke-img {
-  width: 60%;
+.poison{
+	background-color: #bf4080;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
 }
 
-.poke-name {
+.ice{
+	background-color: #e6ffff;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.flying{
+	background-color: #80bfff;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.psychic{
+	background-color: #ff80aa;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.water{
+	background-color: #99e6ff;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.rock{
+	background-color:#ccccb3;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.ground{
+	background-color:#adad85;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.electric{
+	background-color:#ffd633;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.bug{
+	background-color: #d5ff80;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.normal{
+	background-color: #b3b3cc;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.fighting{
+	background-color: #ff3333;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.dragon{
+	background-color: #aa80ff;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.ghost{
+	background-color: #d279a6;
+	width: 75px;
+	height: 40px;
+	font-family: 'Roboto Mono', monospace;
+	border-radius: 10px;
+}
+
+.pokemon-list{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pokemon{
+	list-style: none;
+	width: 20%;
+	text-align: center;
+}
+
+.poke-name, .poke-type{
+	padding: 5px;
   text-align: center;
   margin: auto;
   font-size: 1rem;
-  width: 70%;
-  padding: 15px;
 }
 
-
-
-/* .poke-list{
-  width: 25%;
-  margin: 20px;
-  padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.poke-img{
+	background-color: #e6e6e6;
+	padding: 10px;
+	border-radius: 10px;
 }
 
-.poke-img {
-  width: 50%;
+#selectOption{
+	padding: 10px;
+	display: inline;
 }
-
-.poke-name {
-  text-align: center;
-  margin: auto;
-  font-size: 1rem;
-  width: 70%;
-  padding: 15px;
-}
-
-.poke-type {
-  text-align: center;
-  margin: auto;
-  width: 70%;
-  padding: 15px;
-  margin-top: 0;
-} */
