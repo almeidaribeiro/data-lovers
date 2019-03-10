@@ -168,3 +168,16 @@ function showOderPokemons(event) {
       `).join("")}  
   `
 }
+
+let media = document.getElementById("media")
+media.addEventListener("click", showAverage)
+
+function showAverage(){
+  let sum = pokemon.reduce(
+  (total, altura) => total = (total + parseFloat(altura.height)),
+  0);
+  let average = sum/151
+  let totalAverage = document.getElementById("averageHeight")
+  totalAverage.innerHTML = "Média de " + parseFloat(average.toFixed(2)) + " metros"
+}
+

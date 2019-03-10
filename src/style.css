@@ -52,7 +52,7 @@ h3, p {
 	justify-content: flex-start;
 }
 
-/* Dropmenu Content (Hidden by Default) */
+/* Dropmenu Content (Hidden by Default) 
 .dropmenu-content {
 	display: none;
 	position: absolute;
@@ -63,7 +63,7 @@ h3, p {
 	background-color: white;
   }
   
-  /* Links inside the dropdown */
+  /* Links inside the dropdown 
   .dropmenu-content a {
 	color: black;
 	-webkit-text-stroke-color: black;
@@ -74,20 +74,20 @@ h3, p {
 	display: block;
   }
   
-  /* Change color of dropdown links on hover */
+  /* Change color of dropdown links on hover 
   .dropmenu-content a:hover {
 	background-color: rgb(237, 250, 53);
   }
   
-   /*Show the dropdown menu on hover*/
+   /*Show the dropdown menu on hover
   .drop:hover .dropmenu-content {
 	display: block;
   }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* Change the background color of the dropdown button when the dropdown content is shown 
   .drop:hover .dropmenu {
 	background-color: rgb(222, 236, 26);
-	}
+	}*/
 
 	
 .poke-list{
@@ -95,15 +95,12 @@ h3, p {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center
 }
 
 .display{
 	width: 25%;
 	padding-top: 20px;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 }
 
 .poke-img {

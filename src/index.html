@@ -12,14 +12,14 @@
       <img class="imgPokemon" src="img/logo.png" alt="logo">
       <h3 class="title">.Data</h3>
     </section>
-    <nav class="drop">
+    <!-- <nav class="drop">
         <button class="dropmenu">Tipo</button> 
         <div class="dropmenu-content">
           <a href="#">Fire</a>
           <a href="#">water</a>
           <a href="#">Poison</a>
         </div>
-      </nav>
+      </nav> -->
       <section id="poke-list" class="poke-list">
         <div id="display" class="display"></div>
       </section>
@@ -50,6 +50,13 @@
         </select>
       </section>
     
+    <section class="media">
+      <p id="calculos">Informações sobre a altura de seus pokemons!</p>
+      <input type="radio" name="calculo" value="mediaAltura" id="media"/> Media de altura dos Pokemons<br />
+      <input type="radio" name="calculo" value="menor"/> Menor altura<br />
+      <input type="radio" name="calculo" value="maior"/> Maior altura<br />
+      <textarea id="averageHeight"></textarea>
+    </section>
         
         
     <script src="./data/pokemon/pokemon.js"></script>  
