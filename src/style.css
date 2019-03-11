@@ -203,9 +203,9 @@ h3, p {
 	display: inline;
 }
 
-.averageHeight{
-	margin: 80px;
+.calculation{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }

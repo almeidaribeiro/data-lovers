@@ -54,6 +54,7 @@ function sortPokemons(content) {
 }
 
 function showPokemons(data) {
+
   let pokemonList = document.getElementById("pokemon-list");
   pokemonList.innerHTML = `${data.map((pokemon) => `
       <li class="pokemon">  
@@ -63,34 +64,60 @@ function showPokemons(data) {
       </li>
       `).join("")}`
 
-  document.getElementById("averageHeight").hidden = true;
+  document.getElementById("calculation").hidden = true;
   document.getElementById("pokemons").hidden = false;
 }
 
+document.getElementById("calculo").addEventListener("change", showCalcHeight)
+document.getElementById("calculoPeso").addEventListener("change", showCalcPeso)
 
-function showCalculo() {
-  let showCalc = document.getElementById("averageHeight")
+function showCalcHeight() {
+  let showCalc = document.getElementById("calculation")
   let calculo = data.sort((a, b) => (a.height < b.height ? -1 : 1));
   const select = document.getElementById("calculo");
   const selectedValue = select.options[select.selectedIndex].value;
   if (selectedValue === "selecione") {
     showCalc.innerHTML = "";
   } if (selectedValue === "mediaAltura") {
-    let sum = data.reduce(
+      let sum = data.reduce(
       (total, altura) => total = (total + parseFloat(altura.height)), 0);
-    let average = sum / 151
-    showCalc.innerHTML = "Média de " + parseFloat(average.toFixed(2)) + " metros"
+      let average = sum / 151
+      showCalc.innerHTML = "Média de altura entre todos os pokemons é de" + parseFloat(average.toFixed(2)) + " metros"
   } if (selectedValue === "menor") {
-    let calcMenor = calculo[0].height
-    let calcName = calculo[0].name
-    showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
+      let calcMenor = calculo[0].height
+      let calcName = calculo[0].name
+      showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
   } if (selectedValue === "maior") {
-    let calcMaior = calculo[calculo.length - 1].height
-    let calcName = calculo[calculo.length - 1].name
-    showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior
+      let calcMaior = calculo[calculo.length - 1].height
+      let calcName = calculo[calculo.length - 1].name
+      showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior
   }
-  document.getElementById("averageHeight").hidden = false;
+  document.getElementById("calculation").hidden = false;
   document.getElementById("pokemons").hidden = true;
 }
 
-document.getElementById("calculo").addEventListener("change", showCalculo)
+function showCalcPeso() {
+  let showCalc = document.getElementById("calculation")
+  let calculo = data.sort((a, b) => (a.weight < b.weight ? -1 : 1));
+  const select = document.getElementById("calculoPeso");
+  const selectedValue = select.options[select.selectedIndex].value;
+  if (selectedValue === "selecione") {
+    showCalc.innerHTML = "";
+  } if (selectedValue === "mediaPeso") {
+      let sum = data.reduce(
+      (total, peso) => total = (total + parseFloat(peso.weight)), 0);
+      let average = sum / 151
+      showCalc.innerHTML = "Média de peso entre todos os pokemons é de " + parseFloat(average.toFixed(2)) + " kg"
+  } if (selectedValue === "menorPeso") {
+      let calcMenor = calculo[0].weight
+      let calcName = calculo[0].name
+      showCalc.innerHTML = "Menor peso é do " + calcName + " de " + calcMenor
+  } if (selectedValue === "maiorPeso") {
+      let calcMaior = calculo[calculo.length - 1].weight
+      let calcName = calculo[calculo.length - 1].name
+      showCalc.innerHTML = "Maior peso é do " + calcName + " de " + calcMaior
+  }
+  document.getElementById("calculation").hidden = false;
+  document.getElementById("pokemons").hidden = true;
+}
+

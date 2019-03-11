@@ -13,7 +13,7 @@
 </header>
 
 <body>
-  
+
   <div id="types" class="btn-type">
     <button id="btn-all" class="all">All</button>
     <button id="btn-fire" class="fire">Fire</button>
@@ -32,31 +32,37 @@
     <button id="btn-dragon" class="dragon">Dragon</button>
     <button id="btn-ghost" class="ghost">Ghost</button>
   </div>
-  
+
 
   <section id="selectOption">
-    <select id="sort" value="sort" >
+    <select id="sort" value="sort">
       <option id="sel">Ordenar</option>
       <option id="az" value="A-Z">A-Z</option>
       <option id="za" value="Z-A">Z-A</option>
     </select>
 
     <select id="calculo" value="calculo">
-      <option id="selecione" value="selecione" selected="selected">Selecione</option>
+      <option id="selecione" value="selecione" selected="selected">Altura</option>
       <option id="media" value="mediaAltura">Media de altura</option>
       <option id="menor" value="menor">Menor altura</option>
       <option id="maior" value="maior">Maior altura</option>
     </select>
-    <div id="averageHeight" class="averageHeight"></div>
-  
-  <section id="pokemons" class="pokemons">
-    <ul id="pokemon-list" class="pokemon-list">
+    <select id="calculoPeso" value="calculoPeso">
+      <option id="selecione" value="selecione" selected="selected">Peso</option>
+      <option id="mediaPeso" value="mediaPeso">Media de peso</option>
+      <option id="menorPeso" value="menorPeso">Menor peso</option>
+      <option id="maiorPeso" value="maiorPeso">Maior peso</option>
+    </select>
+    <section class="calculation">
+      <p id="calculation"></p>
+    </section>
 
-    </ul>
-  </section>
+    <section id="pokemons" class="pokemons">
+      <ul id="pokemon-list" class="pokemon-list"></ul>
+    </section>
 
-  <script src="./data/pokemon/pokemon.js"></script>
-  <script src="main.js"></script>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
