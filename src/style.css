@@ -202,3 +202,10 @@ h3, p {
 	padding: 10px;
 	display: inline;
 }
+
+.averageHeight{
+	margin: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

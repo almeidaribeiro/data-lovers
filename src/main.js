@@ -21,19 +21,20 @@ document.getElementById("btn-normal").addEventListener("click", () => getFiltere
 document.getElementById("btn-fighting").addEventListener("click", () => getFilteredPokemons("Fighting"));
 document.getElementById("btn-dragon").addEventListener("click", () => getFilteredPokemons("Dragon"));
 document.getElementById("btn-ghost").addEventListener("click", () => getFilteredPokemons("Ghost"));
-document.querySelector("#sort").addEventListener("change", () => getFilteredPokemons(null));
+document.querySelector('#sort').addEventListener('change', () => getFilteredPokemons(null));
 
 function getFilteredPokemons(pkmType) {
   const filterBy = pkmType || LAST || "All";
   LAST = filterBy;
 
   let pokeTypes = data;
-  
-  if (filterBy != "All"){
-     pokeTypes = data.filter((pkm) => pkm.type.includes(filterBy));
+
+  if (filterBy != "All") {
+    pokeTypes = data.filter((pkm) => pkm.type.includes(filterBy));
   }
-  
+
   sortPokemons(pokeTypes);
+
 }
 
 function sortPokemons(content) {
@@ -58,25 +59,38 @@ function showPokemons(data) {
       <li class="pokemon">  
         <img src="${pokemon["img"]}" class="poke-img" />  
         <h3 class="poke-name">${pokemon["name"]}</h3>      
-        <h3 class="poke-type">${pokemon["type"].join(" | ")}</h3>
+        <h3 class="poke-type">${pokemon["type"].join(" | ")}</h3> <br>
       </li>
       `).join("")}`
+
+  document.getElementById("averageHeight").hidden = true;
+  document.getElementById("pokemons").hidden = false;
 }
 
-// //let media = document.getElementById("media")
-// //media.addEventListener("click", showAverage)
 
-// function showAverage() {
-//   const select = document.getElementById("media");
-//   const selectedValue = select.options[select.selectedIndex].value;
+function showCalculo() {
+  let showCalc = document.getElementById("averageHeight")
+  let calculo = data.sort((a, b) => (a.height < b.height ? -1 : 1));
+  const select = document.getElementById("calculo");
+  const selectedValue = select.options[select.selectedIndex].value;
+  if (selectedValue === "selecione") {
+    showCalc.innerHTML = "";
+  } if (selectedValue === "mediaAltura") {
+    let sum = data.reduce(
+      (total, altura) => total = (total + parseFloat(altura.height)), 0);
+    let average = sum / 151
+    showCalc.innerHTML = "Média de " + parseFloat(average.toFixed(2)) + " metros"
+  } if (selectedValue === "menor") {
+    let calcMenor = calculo[0].height
+    let calcName = calculo[0].name
+    showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
+  } if (selectedValue === "maior") {
+    let calcMaior = calculo[calculo.length - 1].height
+    let calcName = calculo[calculo.length - 1].name
+    showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior
+  }
+  document.getElementById("averageHeight").hidden = false;
+  document.getElementById("pokemons").hidden = true;
+}
 
-//   if(selectedValue === "altura"){
-//   let sum = pokemon.reduce(
-//     (total, altura) => total = (total + parseFloat(altura.height)),
-//     0);
-//   } 
-//   let average = sum / 151
-//   let totalAverage = document.getElementById("averageHeight")
-//   totalAverage.innerHTML = "Média de " + parseFloat(average.toFixed(2)) + " metros"
-  
-// }
+document.getElementById("calculo").addEventListener("change", showCalculo)
