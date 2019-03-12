@@ -16,7 +16,7 @@
 ***
 
 
-![Persona](src/img/personas.jpeg) 
+![Persona](src/img/persona.jpeg) 
 
 ## Preâmbulo
 
