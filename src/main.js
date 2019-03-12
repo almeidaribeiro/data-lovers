@@ -110,10 +110,7 @@ function displayCalc(name, calc){
       
     }
   }
-}
-
-//criar uma função de flitro que filtre a menor altura e exiba a imagem junto com o calculo ????
-
+} 
 
 function showCalcPeso() {
   let showCalc = document.getElementById("calculation")
