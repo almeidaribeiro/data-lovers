@@ -58,8 +58,8 @@ function showPokemons(data) {
   let pokemonList = document.getElementById("pokemon-list");
   pokemonList.innerHTML = `${data.map((pokemon) => `
       <li class="pokemon">  
-        <img src="${pokemon["img"]}" class="poke-img" />  
         <h3 class="poke-name">${pokemon["name"]}</h3> 
+        <img src="${pokemon["img"]}" class="poke-img" />  
         <h3 class="poke-height">${"Altura: " + pokemon["height"]}</h3>  
         <h3 class="poke-weight">${"Peso: " + pokemon["weight"]}</h3>  
         <h3 class="poke-type">${"Tipo: " + pokemon["type"].join(" | ")}</h3> <br>
@@ -84,19 +84,36 @@ function showCalcHeight() {
       let sum = data.reduce(
       (total, altura) => total = (total + parseFloat(altura.height)), 0);
       let average = sum / 151
-      showCalc.innerHTML = "Média de altura entre todos os pokemons é de" + parseFloat(average.toFixed(2)) + " metros"
+      showCalc.innerHTML = "Média de altura entre todos os pokemons é de" + parseFloat(average.toFixed(2)) + " metros" 
   } if (selectedValue === "menor") {
       let calcMenor = calculo[0].height
       let calcName = calculo[0].name
-      showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
+      displayCalc(calcName, calcMenor)
+      //showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
   } if (selectedValue === "maior") {
       let calcMaior = calculo[calculo.length - 1].height
       let calcName = calculo[calculo.length - 1].name
-      showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior
+      showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior 
   }
   document.getElementById("calculation").hidden = false;
   document.getElementById("pokemons").hidden = true;
 }
+
+function displayCalc(name, calc){
+  let showCalc = document.getElementById("calculation");
+  showCalc.innerHTML = "Menor altura é do " + name + " de " + calc;
+  for(let i in POKEMON["pokemon"]){
+    let pokeGet = POKEMON["pokemon"][i];
+    let pokeName = pokeGet.name;
+
+    if(pokeName === name){
+      
+    }
+  }
+}
+
+//criar uma função de flitro que filtre a menor altura e exiba a imagem junto com o calculo ????
+
 
 function showCalcPeso() {
   let showCalc = document.getElementById("calculation")

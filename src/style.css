@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Abel|Fjalla+One|Varela+Round');
 
 body {
 	margin: 0%;
@@ -54,7 +56,6 @@ h3, p {
 	width: 75px;
 	height: 40px;
 	font-family: 'Roboto Mono', monospace;
-	
 	border-radius: 10px;
 }
 
@@ -170,14 +171,15 @@ h3, p {
 	border-radius: 10px;
 }
 
-.pokemon-list{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
 
+	.pokemon-list{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
 .pokemon{
 	list-style: none;
 	width: 20%;
@@ -188,9 +190,15 @@ h3, p {
   padding: 5px;
   text-align: center;
   margin: auto;
+  font-family: 'Abel', sans-serif;
+  font-size: 1rem;
 }
 
 .poke-name{
+	font-family: 'Varela Round', sans-serif;
+	text-transform: uppercase;
+	color: #660000;
+	padding: 10px;
 }
 
 .poke-img{
@@ -201,7 +209,9 @@ h3, p {
 
 #selectOption{
 	padding: 10px;
-	display: inline;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .calculation{
@@ -209,5 +219,4 @@ h3, p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
 }

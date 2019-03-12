@@ -15,6 +15,9 @@
 
 ***
 
+
+![Persona](src/img/fluxogramacipher.png)
+
 ## Preâmbulo
 
 Segundo um [estudo da IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),

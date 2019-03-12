@@ -15,26 +15,26 @@
 <body>
 
   <div id="types" class="btn-type">
-    <button id="btn-all" class="all">All</button>
-    <button id="btn-fire" class="fire">Fire</button>
-    <button id="btn-grass" class="grass">Grass</button>
-    <button id="btn-poison" class="poison">Poison</button>
-    <button id="btn-ice" class="ice">Ice</button>
-    <button id="btn-ground" class="ground">Ground</button>
-    <button id="btn-flying" class="flying">Flying</button>
-    <button id="btn-psychic" class="psychic">Psychic</button>
-    <button id="btn-water" class="water">Water</button>
-    <button id="btn-rock" class="rock">Rock</button>
-    <button id="btn-electric" class="electric">Electric</button>
-    <button id="btn-bug" class="bug">Bug</button>
+    <button id="btn-all" class="all">Todos</button>
+    <button id="btn-fire" class="fire">Fogo</button>
+    <button id="btn-grass" class="grass">Grama</button>
+    <button id="btn-poison" class="poison">venenoso</button>
+    <button id="btn-ice" class="ice">Gelo</button>
+    <button id="btn-ground" class="ground">Terra</button>
+    <button id="btn-flying" class="flying">Voador</button>
+    <button id="btn-psychic" class="psychic">Psíquico</button>
+    <button id="btn-water" class="water">Água</button>
+    <button id="btn-rock" class="rock">Pedra</button>
+    <button id="btn-electric" class="electric">Elétrico</button>
+    <button id="btn-bug" class="bug">Inseto</button>
     <button id="btn-normal" class="normal">Normal</button>
-    <button id="btn-fighting" class="fighting">Fighting</button>
-    <button id="btn-dragon" class="dragon">Dragon</button>
-    <button id="btn-ghost" class="ghost">Ghost</button>
+    <button id="btn-fighting" class="fighting">Lutador</button>
+    <button id="btn-dragon" class="dragon">Dragão</button>
+    <button id="btn-ghost" class="ghost">Fantasma</button>
   </div>
 
 
-  <section id="selectOption">
+  <section id="selectOption" class="select-option">
     <select id="sort" value="sort">
       <option id="sel">Ordenar</option>
       <option id="az" value="A-Z">A-Z</option>
@@ -47,22 +47,25 @@
       <option id="menor" value="menor">Menor altura</option>
       <option id="maior" value="maior">Maior altura</option>
     </select>
+
     <select id="calculoPeso" value="calculoPeso">
       <option id="selecione" value="selecione" selected="selected">Peso</option>
       <option id="mediaPeso" value="mediaPeso">Media de peso</option>
       <option id="menorPeso" value="menorPeso">Menor peso</option>
       <option id="maiorPeso" value="maiorPeso">Maior peso</option>
     </select>
-    <section class="calculation">
-      <p id="calculation"></p>
-    </section>
+  </section>
+  <div class="calculation">
+    <p id="calculation"></p>
+  </div>
+  
 
-    <section id="pokemons" class="pokemons">
-      <ul id="pokemon-list" class="pokemon-list"></ul>
-    </section>
+  <section id="pokemons" class="pokemons">
+    <ul id="pokemon-list" class="pokemon-list"></ul>
+  </section>
 
-    <script src="./src/data/pokemon/pokemon.js"></script>
-    <script src="./src/main.js"></script>
+  <script src="./src/data/pokemon/pokemon.js"></script>
+  <script src="./src/main.js"></script>
 </body>
 
 </html>
