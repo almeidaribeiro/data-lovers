@@ -3,7 +3,6 @@
 body {
 	margin: 0%;
 	width: 100%;
-	font-family: 'Niramit', sans-serif;
 	font-size: 1.2rem;
 	background-color: #DCDCDC;
 }
@@ -185,11 +184,15 @@ h3, p {
 	text-align: center;
 }
 
-.poke-name, .poke-type{
-	padding: 5px;
+.poke-type, .poke-height, .poke-weight{
+padding: 5px;
   text-align: center;
   margin: auto;
-  font-size: 1rem;
+  font-family: 'Amatic SC', cursive;
+}
+
+.poke-name{
+
 }
 
 .poke-img{
@@ -204,6 +207,7 @@ h3, p {
 }
 
 .calculation{
+	padding: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -59,8 +59,10 @@ function showPokemons(data) {
   pokemonList.innerHTML = `${data.map((pokemon) => `
       <li class="pokemon">  
         <img src="${pokemon["img"]}" class="poke-img" />  
-        <h3 class="poke-name">${pokemon["name"]}</h3>      
-        <h3 class="poke-type">${pokemon["type"].join(" | ")}</h3> <br>
+        <h3 class="poke-name">${pokemon["name"]}</h3> 
+        <h3 class="poke-height">${"Altura: " + pokemon["height"]}</h3>  
+        <h3 class="poke-weight">${"Peso: " + pokemon["weight"]}</h3>  
+        <h3 class="poke-type">${"Tipo: " + pokemon["type"].join(" | ")}</h3> <br>
       </li>
       `).join("")}`
 
