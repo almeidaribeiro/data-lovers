@@ -101,13 +101,14 @@ function showCalcHeight() {
 
 function displayCalc(name, calc){
   let showCalc = document.getElementById("calculation");
-  showCalc.innerHTML = "Menor altura é do " + name + " de " + calc;
+  
   for(let i in POKEMON["pokemon"]){
     let pokeGet = POKEMON["pokemon"][i];
     let pokeName = pokeGet.name;
 
     if(pokeName === name){
-      
+      showCalc.innerHTML = `<p>Menor altura é do ${name}  de  ${calc}</p>
+      <img src=${pokeGet.img}>` 
     }
   }
 } 
