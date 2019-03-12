@@ -16,7 +16,7 @@
 ***
 
 
-![Persona](src/img/fluxogramacipher.png)
+![Persona](src/img/persona1.jpeg)
 
 ## Preâmbulo
 
