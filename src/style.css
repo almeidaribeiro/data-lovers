@@ -185,10 +185,9 @@ h3, p {
 }
 
 .poke-type, .poke-height, .poke-weight{
-padding: 5px;
+  padding: 5px;
   text-align: center;
   margin: auto;
-  font-family: 'Amatic SC', cursive;
 }
 
 .poke-name{
