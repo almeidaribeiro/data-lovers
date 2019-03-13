@@ -124,11 +124,11 @@ function showCalcPeso() {
       (total, peso) => total = (total + parseFloat(peso.weight)), 0);
       let average = sum / 151
       showCalc.innerHTML = "Média de peso entre todos os pokemons é de " + parseFloat(average.toFixed(2)) + " kg"
-  } if (selectedValue === "menorPeso") {
+  } if (selectedValue === "menor") {
       let calcMinimum = calculo[0].weight
       let calcName = calculo[0].name
       displayWeight(calcName, calcMinimum, selectedValue);
-  } if (selectedValue === "maiorPeso") {
+  } if (selectedValue === "maior") {
       let calcMaximum = calculo[calculo.length - 1].weight
       let calcName = calculo[calculo.length - 1].name
       displayWeight(calcName, calcMaximum, selectedValue);
@@ -145,7 +145,7 @@ function displayWeight(name, calc, selectedValue){
     let pokeName = pokeGet.name;
 
     if(pokeName === name){
-      showCalc.innerHTML = `<p>O ${selectedValue}  é do ${name}  de  ${calc}</p>
+      showCalc.innerHTML = `<p>O ${selectedValue} peso é do ${name}  de  ${calc}</p>
       <img class="imgCalc" src=${pokeGet.img}>` 
     }
   }
