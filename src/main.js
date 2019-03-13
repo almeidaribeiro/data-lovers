@@ -86,20 +86,19 @@ function showCalcHeight() {
       let average = sum / 151
       showCalc.innerHTML = "Média de altura entre todos os pokemons é de" + parseFloat(average.toFixed(2)) + " metros" 
   } if (selectedValue === "menor") {
-      let calcMenor = calculo[0].height
+      let calcMinimum = calculo[0].height
       let calcName = calculo[0].name
-      displayCalc(calcName, calcMenor)
-      //showCalc.innerHTML = "Menor altura é do " + calcName + " de " + calcMenor
+      displayHeight(calcName, calcMinimum, selectedValue);
   } if (selectedValue === "maior") {
-      let calcMaior = calculo[calculo.length - 1].height
+      let calcMaximum = calculo[calculo.length - 1].height
       let calcName = calculo[calculo.length - 1].name
-      showCalc.innerHTML = "Maior altura é do " + calcName + " de " + calcMaior 
+      displayHeight(calcName, calcMaximum, selectedValue);
   }
   document.getElementById("calculation").hidden = false;
   document.getElementById("pokemons").hidden = true;
 }
 
-function displayCalc(name, calc){
+function displayHeight(name, calc, selectedValue){
   let showCalc = document.getElementById("calculation");
   
   for(let i in POKEMON["pokemon"]){
@@ -107,11 +106,11 @@ function displayCalc(name, calc){
     let pokeName = pokeGet.name;
 
     if(pokeName === name){
-      showCalc.innerHTML = `<p>Menor altura é do ${name}  de  ${calc}</p>
-      <img src=${pokeGet.img}>` 
+      showCalc.innerHTML = `<p>A ${selectedValue} altura é do ${name}  de  ${calc}</p>
+      <img class="imgCalc" src=${pokeGet.img}>` 
     }
   }
-} 
+}
 
 function showCalcPeso() {
   let showCalc = document.getElementById("calculation")
@@ -126,15 +125,28 @@ function showCalcPeso() {
       let average = sum / 151
       showCalc.innerHTML = "Média de peso entre todos os pokemons é de " + parseFloat(average.toFixed(2)) + " kg"
   } if (selectedValue === "menorPeso") {
-      let calcMenor = calculo[0].weight
+      let calcMinimum = calculo[0].weight
       let calcName = calculo[0].name
-      showCalc.innerHTML = "Menor peso é do " + calcName + " de " + calcMenor
+      displayWeight(calcName, calcMinimum, selectedValue);
   } if (selectedValue === "maiorPeso") {
-      let calcMaior = calculo[calculo.length - 1].weight
+      let calcMaximum = calculo[calculo.length - 1].weight
       let calcName = calculo[calculo.length - 1].name
-      showCalc.innerHTML = "Maior peso é do " + calcName + " de " + calcMaior
+      displayWeight(calcName, calcMaximum, selectedValue);
   }
   document.getElementById("calculation").hidden = false;
   document.getElementById("pokemons").hidden = true;
 }
 
+function displayWeight(name, calc, selectedValue){
+  let showCalc = document.getElementById("calculation");
+  
+  for(let i in POKEMON["pokemon"]){
+    let pokeGet = POKEMON["pokemon"][i];
+    let pokeName = pokeGet.name;
+
+    if(pokeName === name){
+      showCalc.innerHTML = `<p>O ${selectedValue}  é do ${name}  de  ${calc}</p>
+      <img class="imgCalc" src=${pokeGet.img}>` 
+    }
+  }
+}

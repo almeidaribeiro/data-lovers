@@ -172,13 +172,13 @@ h3, p {
 }
 
 
-	.pokemon-list{
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
+.pokemon-list{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 	
 .pokemon{
 	list-style: none;
@@ -218,5 +218,12 @@ h3, p {
 	padding: 30px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+}
+
+.imgCalc{
+	background-color: #e6e6e6;
+	padding: 30px;
+	border-radius: 10px;
 	align-items: center;
 }
