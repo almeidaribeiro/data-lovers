@@ -1,4 +1,4 @@
-![screen](img/screen.png)
+![screen](./src/img/screen.png)
 
 # Data Lovers
 
