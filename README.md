@@ -1,3 +1,5 @@
+![Screenshot from 2019-07-14 22-56-40](https://user-images.githubusercontent.com/46823142/61192627-218c8400-a68c-11e9-8375-ebd81a46e7a7.png)
+
 # Data Lovers
 
 Projeto proposto durante o bootcamp Laboratória em Fevereiro/2019.
