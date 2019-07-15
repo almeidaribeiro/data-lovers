@@ -5,6 +5,7 @@ let data = POKEMON["pokemon"];
 window.onload = function () {
   showPokemons(data);
 }
+
 document.getElementById("btn-all").addEventListener("click", () => getFilteredPokemons("All"));
 document.getElementById("btn-fire").addEventListener("click", () => getFilteredPokemons("Fire"));
 document.getElementById("btn-grass").addEventListener("click", () => getFilteredPokemons("Grass"));
@@ -54,7 +55,6 @@ function sortPokemons(content) {
 }
 
 function showPokemons(data) {
-
   let pokemonList = document.getElementById("pokemon-list");
   pokemonList.innerHTML = `${data.map((pokemon) => `
       <li class="pokemon">  
@@ -65,7 +65,6 @@ function showPokemons(data) {
         <h3 class="poke-type">${"Tipo: " + pokemon["type"].join(" | ")}</h3> <br>
       </li>
       `).join("")}`
-
   document.getElementById("calculation").hidden = true;
   document.getElementById("pokemons").hidden = false;
 }
@@ -76,22 +75,22 @@ document.getElementById("calculoPeso").addEventListener("change", showCalcPeso)
 function showCalcHeight() {
   let showCalc = document.getElementById("calculation")
   let calculo = data.sort((a, b) => (a.height < b.height ? -1 : 1));
-  const select = document.getElementById("calculo");
+  const select = document.getElementById("calculo");//index
   const selectedValue = select.options[select.selectedIndex].value;
   if (selectedValue === "selecione") {
     showCalc.innerHTML = "";
-  } if (selectedValue === "mediaAltura") {
+  } if (selectedValue === "mediaAltura") {//option id index
       let sum = data.reduce(
-      (total, altura) => total = (total + parseFloat(altura.height)), 0);
+      (total, altura) => total = (total + parseFloat(altura.height)), 0);//parametros
       let average = sum / 151
       showCalc.innerHTML = "Média de altura entre todos os pokemons é de" + parseFloat(average.toFixed(2)) + " metros" 
-  } if (selectedValue === "menor") {
-      let calcMinimum = calculo[0].height
+  } if (selectedValue === "menor") {//option id index
+      let calcMinimum = calculo[0].height//variavel acima
       let calcName = calculo[0].name
       displayHeight(calcName, calcMinimum, selectedValue);
   } if (selectedValue === "maior") {
-      let calcMaximum = calculo[calculo.length - 1].height
-      let calcName = calculo[calculo.length - 1].name
+      let calcMaximum = calculo[calculo.length - 1].height//variavel acima 
+      let calcName = calculo[calculo.length - 1].name//variavel acima
       displayHeight(calcName, calcMaximum, selectedValue);
   }
   document.getElementById("calculation").hidden = false;
@@ -115,22 +114,22 @@ function displayHeight(name, calc, selectedValue){
 function showCalcPeso() {
   let showCalc = document.getElementById("calculation")
   let calculo = data.sort((a, b) => (a.weight < b.weight ? -1 : 1));
-  const select = document.getElementById("calculoPeso");
+  const select = document.getElementById("calculoPeso");//id no index
   const selectedValue = select.options[select.selectedIndex].value;
   if (selectedValue === "selecione") {
     showCalc.innerHTML = "";
-  } if (selectedValue === "mediaPeso") {
+  } if (selectedValue === "mediaPeso") {//option id index
       let sum = data.reduce(
-      (total, peso) => total = (total + parseFloat(peso.weight)), 0);
+      (total, peso) => total = (total + parseFloat(peso.weight)), 0);//parametros
       let average = sum / 151
       showCalc.innerHTML = "Média de peso entre todos os pokemons é de " + parseFloat(average.toFixed(2)) + " kg"
-  } if (selectedValue === "menor") {
-      let calcMinimum = calculo[0].weight
-      let calcName = calculo[0].name
+  } if (selectedValue === "menor") {//option id index
+      let calcMinimum = calculo[0].weight//variavel acima
+      let calcName = calculo[0].name//variavel acima
       displayWeight(calcName, calcMinimum, selectedValue);
   } if (selectedValue === "maior") {
-      let calcMaximum = calculo[calculo.length - 1].weight
-      let calcName = calculo[calculo.length - 1].name
+      let calcMaximum = calculo[calculo.length - 1].weight//variavel acima
+      let calcName = calculo[calculo.length - 1].name//variavel acima
       displayWeight(calcName, calcMaximum, selectedValue);
   }
   document.getElementById("calculation").hidden = false;
